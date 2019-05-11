@@ -141,5 +141,80 @@
      echo "{$num}回目。";
  }
 
+ //p100
+ function oneUp (&$var) {
+      $var ++;
+ }
+
+ $num = 5;
+ oneUp($num);
+ echo $num;
+
+ //p102
+ function myFunc() {
+     $allArgs = func_get_args();
+
+     $total = array_sum($allArgs);
+
+     $numArgs = func_num_args();
+     
+     if ($numArgs>0) {
+         $average = $total/$numArgs;
+         $lastValue = func_get_arg($numArgs-1);
+     } else {
+         $lastValue = $average = $total = '(データなし)';
+     }
+     
+     echo "合計点",$total,"\n";
+     echo "平均点",$average,"\n";
+     echo "最後の点数",$lastValue,"\n";
+ }
+
+ myFunc(43,67,55,75);
+
+ $color = "red";
+ $$color = 125;
+ echo $red;
+
+ //p103
+ $unitPrice = 230;
+ $quantity = 5;
+ 
+ $tanka = "unitPrice";
+ $kosu = "quantity";
+ 
+ $ryoukin = $$tanka * $$kosu;
+ echo $ryoukin . "円";
+
+ //p104
+ function hello($who) {
+     echo "{$who}さん、こんにちは！";
+ }
+
+ function bye($who) {
+     echo "{$who}さん、さよなら！";
+ }
+
+ $msg = "bye";
+ if (function_exists($msg)) {
+     $msg("金太郎");
+ }
+
+ $myFunc = function ($who) {
+     echo "{$who}さん、こんにちは！";
+ };//代入文なのでセミコロンが必要
+
+ $myFunc("田中");
+
+ //p105
+ $msg = "ありがとう";
+ $myFunc = function ($who) use ($msg) {
+     echo "{$who}さん、" . $msg;
+ };
+
+ $myFunc("田中");
+
+ $msg = "さようなら";
+ 
 
 ?>
