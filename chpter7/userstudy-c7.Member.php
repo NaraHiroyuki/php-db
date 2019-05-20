@@ -1,6 +1,12 @@
 <?php
-//p222
-class Menber {
+//p222,226
+class Member {
+    
+    public static $piggyBank = 0;
+    public static function deposit(int $yen) {
+        self::$piggyBank += $yen;
+    }
+    
     public $name;
     public $age;
 
@@ -15,6 +21,10 @@ class Menber {
         } else {
             echo "こんにちは、{$this->name}です!", "\n";
         }
+    }
+
+    public function latePenalty() {
+        self::deposit(1000);
     }
 }
 

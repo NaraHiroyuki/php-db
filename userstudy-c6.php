@@ -437,8 +437,4 @@ array_map("listUp", $point, $split);
 echo "</ul>";
 
 
-
-
-
-
 ?>
