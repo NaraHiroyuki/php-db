@@ -1,7 +1,8 @@
 <?php
+//p230
 class Player {
     public $name;
-    function __construct($name = '名無し'){
+    function __construct($name = "名無し"){
         $this->name = $name;
     }
 
