@@ -14,7 +14,6 @@
     <li><input type="submit" value="調べる"></li>
   </ul>
 </form>
-
 </div>
 </body>
 </html>
