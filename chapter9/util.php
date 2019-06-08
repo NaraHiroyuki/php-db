@@ -1,13 +1,13 @@
 <?php
 // XSS対策のためのHTMLエスケープ
-  function es($data, $charset){
+  function es($data){
       // $dataが配列のとき
       if (is_array($data)){
           // 再帰呼び出し
           return array_map(__METHOD__, $data);
       } else {
           // HTML エスケープを行う
-          return htmlspecialchars($data, ENT_QUOTES, $charset);
+          return htmlspecialchars($data, ENT_QUOTES);
       }
   }
 
